@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".actividade_Secundaria_ListView"/>
-        <activity android:name=".actividade_Secundaria_Scanner"/>
+        <activity android:name=".actividade_Secundaria_Spinner"/>
     </application>
 
 </manifest>
