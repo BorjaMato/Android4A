@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_s_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <RadioButton
+                android:id="@+id/rbtn_Eng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/engadir" />
+
+            <RadioButton
+                android:id="@+id/rbtn_Sobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sobrescribir" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etCoches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Coches"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/btnEngadir"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="btnEngSobre"
+            android:text="@string/boton"/>
+
+        <Button
+            android:id="@+id/btnSecundaria"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="btnSecundario"
+            android:text="@string/Secundario"/>
+
+    </LinearLayout>
+</RelativeLayout>

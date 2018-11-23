@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">U4_Coches_A17BorjaMA</string>
+    <string name="engadir">Engadir</string>
+    <string name="sobrescribir">Sobrescribir</string>
+    <string name="boton">Engadir/Sobrescribir</string>
+    <string name="Secundario">Ver o Ficheiro</string>
+    <string name="Coches">Insertar Coche</string>
+    <string name="Salir">Salir</string>
+</resources>
