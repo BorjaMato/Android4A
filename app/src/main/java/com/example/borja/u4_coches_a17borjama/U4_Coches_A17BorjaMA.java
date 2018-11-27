@@ -21,13 +21,13 @@ import android.view.View;
 public class U4_Coches_A17BorjaMA extends AppCompatActivity {
 
 
-    private static final String NOMEFICHERO = "Coches.txt";
+    private final String NOMEFICHERO = "Coches.txt";
 
     private boolean sdDisponible = false;
     private boolean sdAccesoEscritura = false;
-    private static String ruta;
-    private File dirFicheiroSD;
-    private File rutaCompleta;
+    private String ruta;
+    private File directorioSD;
+    private File archivoCoches;
 
 
     @Override
@@ -53,9 +53,9 @@ public class U4_Coches_A17BorjaMA extends AppCompatActivity {
     public void establecerDirectorioFicheiro() {
 
         if (sdDisponible) {
-            dirFicheiroSD = getExternalFilesDir(null);
-            ruta=dirFicheiroSD+"/"+NOMEFICHERO;
-            rutaCompleta = new File(dirFicheiroSD, NOMEFICHERO);
+            directorioSD = getExternalFilesDir(null);
+            ruta= directorioSD +"/"+NOMEFICHERO;
+            archivoCoches = new File(ruta);
         }
     }
 
@@ -68,8 +68,8 @@ public class U4_Coches_A17BorjaMA extends AppCompatActivity {
         }else{
             if (sdAccesoEscritura) {
                 try {
-                    OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(rutaCompleta, engSobre));
-                    Log.i("ruta", ""+rutaCompleta);
+                    OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(archivoCoches, engSobre));
+                    Log.i("ruta", ""+archivoCoches.getAbsolutePath());
                     osw.write(etTexto.getText() + "-" + time.getTime()+"\n");
                     Log.i("escrito",""+etTexto.getText() + "-" + time.getTime());
                     osw.close();
@@ -103,7 +103,7 @@ public class U4_Coches_A17BorjaMA extends AppCompatActivity {
                     intent.putExtra("ruta",ruta);
                     startActivity(intent);
                 }else{
-                    Intent intent = new Intent(getApplicationContext(),actividade_Secundaria_Scanner.class);
+                    Intent intent = new Intent(getApplicationContext(),actividade_Secundaria_Spinner.class);
                     intent.putExtra("ruta",ruta);
                     startActivity(intent);
                 }
